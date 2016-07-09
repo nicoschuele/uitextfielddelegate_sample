@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Text_Delegation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EgJ-71-MEj">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iir-7O-5ts">
+                                <rect key="frame" x="531" y="66" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleAllowEditing:" destination="BYZ-38-t0r" eventType="valueChanged" id="bCg-Ed-PLD"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow editing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsm-BM-dCr">
+                                <rect key="frame" x="425" y="71" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keyboard is hidden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOZ-lg-nIB">
+                                <rect key="frame" x="20" y="74" width="109" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for edition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fh-hE-8SV">
+                                <rect key="frame" x="20" y="97" width="104" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear button not used" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh7-m6-YW1">
+                                <rect key="frame" x="20" y="120" width="123" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try typing the word &quot;test&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u9-cx-Ty3">
+                                <rect key="frame" x="202" y="169" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Fh-hE-8SV" firstAttribute="top" secondItem="bOZ-lg-nIB" secondAttribute="bottom" constant="8" id="04g-9S-QZk"/>
+                            <constraint firstItem="Vh7-m6-YW1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1Ux-ZV-9ao"/>
+                            <constraint firstItem="EgJ-71-MEj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="23h-4Z-IpQ"/>
+                            <constraint firstItem="4u9-cx-Ty3" firstAttribute="top" secondItem="EgJ-71-MEj" secondAttribute="bottom" constant="111" id="67D-Ew-Ad7"/>
+                            <constraint firstItem="Vh7-m6-YW1" firstAttribute="top" secondItem="0Fh-hE-8SV" secondAttribute="bottom" constant="8" id="89m-Cd-nYc"/>
+                            <constraint firstItem="4u9-cx-Ty3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="97H-Ay-7ll"/>
+                            <constraint firstItem="gsm-BM-dCr" firstAttribute="top" secondItem="EgJ-71-MEj" secondAttribute="bottom" constant="13" id="D2W-69-RlB"/>
+                            <constraint firstItem="EgJ-71-MEj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Ews-v0-BNO"/>
+                            <constraint firstItem="Iir-7O-5ts" firstAttribute="top" secondItem="EgJ-71-MEj" secondAttribute="bottom" constant="8" id="Kb7-vD-U8h"/>
+                            <constraint firstItem="bOZ-lg-nIB" firstAttribute="top" secondItem="EgJ-71-MEj" secondAttribute="bottom" constant="16" id="R5l-k3-K8b"/>
+                            <constraint firstItem="Iir-7O-5ts" firstAttribute="leading" secondItem="gsm-BM-dCr" secondAttribute="trailing" constant="8" id="aQ6-Xw-Cmb"/>
+                            <constraint firstItem="bOZ-lg-nIB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="k3L-cL-GK7"/>
+                            <constraint firstItem="Iir-7O-5ts" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nG7-kK-K3p"/>
+                            <constraint firstItem="EgJ-71-MEj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="r9m-HQ-xUj"/>
+                            <constraint firstItem="EgJ-71-MEj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rIp-BL-KnU"/>
+                            <constraint firstItem="0Fh-hE-8SV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="u7E-OZ-dWP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="allowEditingSwitch" destination="Iir-7O-5ts" id="Km5-5g-9eT"/>
+                        <outlet property="clearButtonUsedLabel" destination="Vh7-m6-YW1" id="1Ya-Wt-3vX"/>
+                        <outlet property="editingStatusLabel" destination="0Fh-hE-8SV" id="Qqk-6f-KeZ"/>
+                        <outlet property="keyboardStatusLabel" destination="bOZ-lg-nIB" id="cBk-r4-VKs"/>
+                        <outlet property="msg" destination="EgJ-71-MEj" id="KMs-JN-A8n"/>
+                        <outlet property="testWordLabel" destination="4u9-cx-Ty3" id="DG8-dx-Aia"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="627" y="659"/>
         </scene>
     </scenes>
 </document>
