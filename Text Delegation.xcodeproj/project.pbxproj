@@ -22,6 +22,7 @@
 		03E389EF1D3101B800C78440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E389F21D3101B800C78440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03E389F41D3101B800C78440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E389FA1D310F3A00C78440 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 		03E389DC1D3101B800C78440 = {
 			isa = PBXGroup;
 			children = (
+				03E389FA1D310F3A00C78440 /* README.md */,
 				03E389E71D3101B800C78440 /* Text Delegation */,
 				03E389E61D3101B800C78440 /* Products */,
 			);
@@ -286,6 +288,7 @@
 				03E389F91D3101B800C78440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
